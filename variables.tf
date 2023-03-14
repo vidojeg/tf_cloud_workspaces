@@ -15,3 +15,11 @@ variable "org_name" {
 variable "org_email" {
   type = map(any)
 }
+
+variable "workspaces" {
+  type = map(any)
+}
+
+variable "vcs" {
+  type = map(any)
+}

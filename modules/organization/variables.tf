@@ -1,7 +1,4 @@
-variable "name" {
-
-}
-
-variable "email" {
-
-}
+variable "name" {}
+variable "email" {}
+variable "workspaces" {}
+variable "vcs" {}
