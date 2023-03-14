@@ -1,5 +1,5 @@
 variable "environment_code" {}
-
+variable "workspaces" {}
 variable "hostname" {
   type = map(any)
 }

@@ -20,11 +20,11 @@ tfe_org = {
 }
 
 workspaces = {
-  prototype = "terraform-azure-blueprints-root"
-  dev       = "terraform-azure-blueprints-root"
-  qa        = "terraform-azure-blueprints-root"
-  stage     = "terraform-azure-blueprints-root"
-  prod      = "terraform-azure-blueprints-root"
+  prototype = "tf_cloud_workspaces"
+  dev       = "tf_cloud_workspaces"
+  qa        = "tf_cloud_workspaces"
+  stage     = "tf_cloud_workspaces"
+  prod      = "tf_cloud_workspaces"
 }
 # global_variables = {
 #   sandbox = {
