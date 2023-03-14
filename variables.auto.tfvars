@@ -6,7 +6,7 @@ hostname = {
 }
 
 tf_token = {
-  sandbox     = "zyORBBAE8Vt3fA.atlasv1.S5gz1T3VkCUXpSBR1F8zjxXK16MkqD9kVliOHe9ENhjER0RzD8SWT6dMztbyGtGuR3M"
+  sandbox     = ""
   development = ""
   stage       = ""
   production  = ""
