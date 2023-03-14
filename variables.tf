@@ -12,8 +12,8 @@ variable "tfe_org" {
   type = map(any)
 }
 
-variable "vcs" {
-  type = map(any)
-}
+# variable "vcs" {
+#   type = map(any)
+# }
 
 variable "global_variables" {}
