@@ -5,13 +5,6 @@ hostname = {
   production  = ""
 }
 
-tf_token = {
-  sandbox     = ""
-  development = ""
-  stage       = ""
-  production  = ""
-}
-
 tfe_org = {
   sandbox     = "azure-blueprints"
   development = ""

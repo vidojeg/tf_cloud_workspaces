@@ -4,9 +4,7 @@ variable "hostname" {
   type = map(any)
 }
 
-variable "tf_token" {
-  type = map(any)
-}
+variable "tfe_token" {}
 
 variable "tfe_org" {
   type = map(any)

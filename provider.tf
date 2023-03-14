@@ -17,5 +17,5 @@ terraform {
 
 provider "tfe" {
   hostname = lookup(var.hostname, var.environment_code)
-  token    = lookup(var.tf_token, var.environment_code)
+  token    = var.tfe_token
 }
