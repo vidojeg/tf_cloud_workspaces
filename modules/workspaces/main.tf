@@ -5,22 +5,22 @@ resource "tfe_variable_set" "varset" {
   organization = var.tfe_org
 }
 
-resource "tfe_variable" "variable" {
-  for_each        = var.global_variables
-  key             = each.key
-  value           = each.value
-  category        = "terraform"
-  description     = format("%s-%s", "variables", each.key)
-  sensitive       = true
-  variable_set_id = tfe_variable_set.varset.id
+# resource "tfe_variable" "variable" {
+#   for_each        = var.global_variables
+#   key             = each.key
+#   value           = each.value
+#   category        = "terraform"
+#   description     = format("%s-%s", "variables", each.key)
+#   sensitive       = true
+#   variable_set_id = tfe_variable_set.varset.id
 
-  lifecycle {
-    ignore_changes = [
-      value,
-    ]
-    prevent_destroy = true
-  }
-}
+#   lifecycle {
+#     ignore_changes = [
+#       value,
+#     ]
+#     prevent_destroy = true
+#   }
+# }
 
 
 

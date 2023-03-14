@@ -19,13 +19,13 @@ tfe_org = {
   production  = ""
 }
 
-global_variables = {
-  sandbox = {
-    tf_token         = ""
-    environment_code = "sandbox"
-    oauth_token      = ""
-  }
-}
+# global_variables = {
+#   sandbox = {
+#     tf_token         = ""
+#     environment_code = "sandbox"
+#     oauth_token      = ""
+#   }
+# }
 
 # vcs = {
 #   sandbox = {
