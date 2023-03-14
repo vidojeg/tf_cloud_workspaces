@@ -20,7 +20,7 @@ org_name = {
 }
 
 org_email = {
-  sandbox     = ""
+  sandbox     = "vidoje.gavrilovich@gmail.com"
   development = ""
   stage       = ""
   production  = ""
