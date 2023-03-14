@@ -24,14 +24,12 @@ resource "tfe_variable" "variable" {
   depends_on = [tfe_variable_set.varset]
 }
 
-
-
-# resource "tfe_oauth_client" "vcs" {
-#   for_each         = var.vcs
-#   name             = each.value.name
-#   organization     = var.tfe_org
-#   api_url          = each.value.api_url
-#   http_url         = each.value.http_url
-#   oauth_token      = each.value.oauth_token
-#   service_provider = each.value.service_provider
-# }
+resource "tfe_oauth_client" "vcs" {
+  for_each         = var.vcs
+  name             = each.value.name
+  organization     = var.tfe_org
+  api_url          = each.value.api_url
+  http_url         = each.value.http_url
+  oauth_token      = each.value.oauth_token
+  service_provider = each.value.service_provider
+}

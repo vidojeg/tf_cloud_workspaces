@@ -27,14 +27,14 @@ global_variables = {
   }
 }
 
-# vcs = {
-#   sandbox = {
-#     gh-vidoje = {
-#       name             = "my-github-oauth-client"
-#       api_url          = "https://api.github.com"
-#       http_url         = "https://github.com"
-#       oauth_token      = ""
-#       service_provider = "github"
-#     }
-#   }
-# }
+vcs = {
+  sandbox = {
+    gh-vidoje = {
+      name             = "my-github-oauth-client"
+      api_url          = "https://api.github.com"
+      http_url         = "https://github.com"
+      oauth_token      = ""
+      service_provider = "github"
+    }
+  }
+}
