@@ -6,24 +6,25 @@ hostname = {
 }
 
 tf_token = {
-  sandbox     = ""
+  sandbox     = "zyORBBAE8Vt3fA.atlasv1.S5gz1T3VkCUXpSBR1F8zjxXK16MkqD9kVliOHe9ENhjER0RzD8SWT6dMztbyGtGuR3M"
   development = ""
   stage       = ""
   production  = ""
 }
 
-org_name = {
+tfe_org = {
   sandbox     = "azure-blueprints"
   development = ""
   stage       = ""
   production  = ""
 }
 
-org_email = {
-  sandbox     = "vidoje.gavrilovich@gmail.com"
-  development = ""
-  stage       = ""
-  production  = ""
+global_variables = {
+  sandbox = {
+    tf_token         = ""
+    environment_code = "sandbox"
+    oauth_token      = ""
+  }
 }
 
 vcs = {
@@ -36,30 +37,4 @@ vcs = {
       service_provider = "github"
     }
   }
-}
-
-vars = {
-  sandbox = {
-    environment_code = ""
-    tf_token         = ""
-
-  }
-}
-
-workspaces = {
-  sandbox = {
-    azure-blueprints-infra = {
-      name                = "azure-blueprints-infra"
-      allow_destroy_plan  = false
-      auto_apply          = false
-      global_remote_state = true
-      terraform_version   = "latest"
-      tags                = ["sandbox"]
-      git_repo            = "vidojeg/azure-blueprints"
-      git_branch          = "main"
-    }
-  }
-  development = {}
-  stage       = {}
-  production  = {}
 }

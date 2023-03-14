@@ -8,18 +8,12 @@ variable "tf_token" {
   type = map(any)
 }
 
-variable "org_name" {
-  type = map(any)
-}
-
-variable "org_email" {
-  type = map(any)
-}
-
-variable "workspaces" {
+variable "tfe_org" {
   type = map(any)
 }
 
 variable "vcs" {
   type = map(any)
 }
+
+variable "global_variables" {}
