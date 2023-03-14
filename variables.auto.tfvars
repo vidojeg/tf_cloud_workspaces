@@ -38,6 +38,14 @@ vcs = {
   }
 }
 
+vars = {
+  sandbox = {
+    environment_code = ""
+    tf_token         = ""
+
+  }
+}
+
 workspaces = {
   sandbox = {
     azure-blueprints-infra = {
