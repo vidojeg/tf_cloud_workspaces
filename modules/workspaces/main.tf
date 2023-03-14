@@ -14,12 +14,12 @@ resource "tfe_variable" "variable" {
   sensitive       = true
   variable_set_id = tfe_variable_set.varset.id
 
-  lifecycle {
-    ignore_changes = [
-      value,
-    ]
-    prevent_destroy = true
-  }
+  # lifecycle {
+  #   ignore_changes = [
+  #     value,
+  #   ]
+  #   prevent_destroy = true
+  # }
 
   depends_on = [tfe_variable_set.varset]
 }
