@@ -10,6 +10,6 @@ variable "global_varset" {
   type = any
 }
 
-# variable "global_variables" {
-#   type = any
-# }
+variable "global_variables" {
+  type = any
+}

@@ -19,13 +19,13 @@ workspaces = {
   stage     = "tf_cloud_workspaces"
   prod      = "tf_cloud_workspaces"
 }
-# global_variables = {
-#   sandbox = {
-#     tf_token         = ""
-#     environment_code = "sandbox"
-#     oauth_token      = ""
-#   }
-# }
+global_variables = {
+  sandbox = {
+    tf_token         = ""
+    environment_code = ""
+    oauth_token      = ""
+  }
+}
 
 # vcs = {
 #   sandbox = {
