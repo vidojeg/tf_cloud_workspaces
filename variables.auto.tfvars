@@ -19,6 +19,13 @@ tfe_org = {
   production  = ""
 }
 
+workspaces = {
+  prototype = "terraform-azure-blueprints-root"
+  dev       = "terraform-azure-blueprints-root"
+  qa        = "terraform-azure-blueprints-root"
+  stage     = "terraform-azure-blueprints-root"
+  prod      = "terraform-azure-blueprints-root"
+}
 # global_variables = {
 #   sandbox = {
 #     tf_token         = ""
