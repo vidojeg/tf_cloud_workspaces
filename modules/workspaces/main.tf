@@ -20,6 +20,8 @@ resource "tfe_variable" "variable" {
     ]
     prevent_destroy = true
   }
+
+  depends_on = [tfe_variable_set.varset]
 }
 
 

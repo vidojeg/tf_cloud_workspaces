@@ -21,7 +21,7 @@ workspaces = {
 }
 global_variables = {
   sandbox = {
-    tf_token         = ""
+    tfe_token        = ""
     environment_code = ""
     oauth_token      = ""
   }
