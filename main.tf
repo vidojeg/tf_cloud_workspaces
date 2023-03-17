@@ -1,3 +1,10 @@
+module "organization" {
+  source = "./modules/org"
+
+  name  = lookup(var.tfe_org, var.environment_code)
+  email = lookup(var.email, var.environment_code)
+}
+
 module "workspaces" {
   source = "./modules/workspaces"
 

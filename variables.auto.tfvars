@@ -12,6 +12,13 @@ tfe_org = {
   production  = ""
 }
 
+email = {
+  sandbox     = "vidoje.gavrilovich@gmail.com"
+  development = ""
+  stage       = ""
+  production  = ""
+}
+
 workspaces = {
   prototype = "tf_cloud_workspaces"
   dev       = "tf_cloud_workspaces"
