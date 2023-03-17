@@ -34,3 +34,12 @@ resource "tfe_variable" "variable" {
 
   depends_on = [tfe_variable_set.varset]
 }
+
+resource "tfe_oauth_client" "vcs_provider" {
+  for_each         = { for vars in local.vcs_providers : "${vars.name}-${vars.svc_provider}" => vars }
+  name             = each.value.name
+  api_url          = each.value.api
+  http_url         = each.value.http
+  oauth_token      = each.value.token
+  service_provider = each.value.svc_provider
+}

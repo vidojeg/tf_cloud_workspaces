@@ -5,5 +5,6 @@ variable "tfe_org" {
     email            = string
     workspaces       = map(any)
     global_variables = map(any)
+    vcs              = map(any)
   }))
 }

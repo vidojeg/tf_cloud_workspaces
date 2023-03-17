@@ -9,3 +9,17 @@ locals {
     ]
   ])
 }
+
+locals {
+  vcs_providers = flatten([
+    for k, v in var.tfe_organization : [
+      for vcs_prov, vcs_options in v.vcs : {
+        name         = vcs_prov
+        api          = vcs_options.api_url
+        http         = vcs_options.http_url
+        token        = vcs_options.oauth_token
+        svc_provider = vcs_options.service_provider
+      }
+    ]
+  ])
+}
