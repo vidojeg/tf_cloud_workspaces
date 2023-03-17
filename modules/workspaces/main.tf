@@ -18,7 +18,7 @@ resource "tfe_variable" "variable" {
     ignore_changes = [
       value,
     ]
-    prevent_destroy = false
+    prevent_destroy = true
   }
 
   depends_on = [tfe_variable_set.varset]
