@@ -42,4 +42,5 @@ resource "tfe_oauth_client" "vcs_provider" {
   http_url         = each.value.http
   oauth_token      = each.value.token
   service_provider = each.value.svc_provider
+  organization     = each.value.org
 }
