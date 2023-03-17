@@ -1,16 +1,9 @@
-variable "environment_code" {}
-variable "workspaces" {}
-variable "hostname" {
-  type = map(any)
-}
-
 variable "tfe_token" {}
 
 variable "tfe_org" {
-  type = map(any)
+  type = map(object({
+    email            = string
+    workspaces       = map(any)
+    global_variables = map(any)
+  }))
 }
-variable "email" {
-  type = map(any)
-}
-
-variable "global_variables" {}

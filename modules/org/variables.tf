@@ -1,2 +1,1 @@
-variable "name" {}
-variable "email" {}
+variable "tfe_organization" {}
