@@ -24,3 +24,11 @@ locals {
     ]
   ])
 }
+
+locals {
+  org_name = flatten([
+    for key, value in var.tfe_organization : {
+      name = key
+    }
+  ])
+}

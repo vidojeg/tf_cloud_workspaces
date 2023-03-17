@@ -1,9 +1,9 @@
 terraform {
   backend "remote" {
-    organization = lookup(var.tfe_org, var.environment_code)
+    organization = "tfe_main"
 
     workspaces {
-      name = lookup(var.workspaces, var.environment_code)
+      name = "tfe_cloud_workspaces"
     }
   }
   required_providers {

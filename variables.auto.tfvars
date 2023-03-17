@@ -5,7 +5,7 @@ tfe_org = {
       github = {
         api_url          = "https://api.github.com"
         http_url         = "https://github.com"
-        oauth_token      = ""
+        oauth_token      = "token"
         service_provider = "github"
       }
     }
