@@ -1,5 +1,5 @@
 tfe_org = {
-  azure-blueprints = {
+  azure-blueprints-sandbox = {
     email      = "vidoje.gavrilovich@gmail.com"
     workspaces = {}
     global_variables = {
