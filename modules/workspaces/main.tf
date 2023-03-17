@@ -11,7 +11,7 @@ resource "tfe_variable" "variable" {
   value           = each.value
   category        = "terraform"
   description     = format("%s-%s", "variables", each.key)
-  sensitive       = true
+  sensitive       = false
   variable_set_id = tfe_variable_set.varset.id
 
   lifecycle {
