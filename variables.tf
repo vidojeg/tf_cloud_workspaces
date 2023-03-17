@@ -12,8 +12,5 @@ variable "tfe_org" {
 variable "email" {
   type = map(any)
 }
-variable "vcs" {
-  type = map(any)
-}
 
 variable "global_variables" {}
