@@ -17,7 +17,6 @@ locals {
         name         = vcs_prov
         api          = vcs_options.api_url
         http         = vcs_options.http_url
-        token        = vcs_options.oauth_token
         svc_provider = vcs_options.service_provider
         org          = k
       }

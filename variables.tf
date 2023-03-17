@@ -8,3 +8,5 @@ variable "tfe_org" {
     vcs              = map(any)
   }))
 }
+
+variable "oauth_token" {}
