@@ -3,7 +3,7 @@
 ## REQUIREMENTS
 
 - Manually create Main organization
-- Add Management repo
+- Add Management repo inside workspace
 - Create TF API USER TOKEN => https://app.terraform.io/app/settings/tokens
 - Create GITHUB PAT TOKEN => https://github.com/settings/tokens
 
