@@ -43,6 +43,10 @@ resource "tfe_oauth_client" "vcs_provider" {
   oauth_token      = var.oauth_token
   service_provider = each.value.svc_provider
   organization     = each.value.org
+
+  depends_on = [
+    tfe_variable.variable
+  ]
 }
 
 resource "tfe_workspace" "workspace" {
@@ -64,4 +68,8 @@ resource "tfe_workspace" "workspace" {
   lifecycle {
     prevent_destroy = false
   }
+
+  depends_on = [
+    tfe_oauth_client.vcs_provider
+  ]
 }
