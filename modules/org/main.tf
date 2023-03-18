@@ -62,7 +62,7 @@ resource "tfe_workspace" "workspace" {
   vcs_repo {
     identifier     = each.value.git_repo
     branch         = each.value.git_branch
-    oauth_token_id = tfe_oauth_client.vcs_provider[each.value.vcs_provider].id
+    oauth_token_id = tfe_oauth_client.vcs_provider[each.value.vcs_provider].oauth_token_id
   }
 
   lifecycle {
