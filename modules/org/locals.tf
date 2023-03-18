@@ -25,9 +25,19 @@ locals {
 }
 
 locals {
-  org_name = flatten([
-    for key, value in var.tfe_organization : {
-      name = key
-    }
+  workspaces = flatten([
+    for k, v in var.tfe_organization : [
+      for ws, ws_info in v.workspaces : {
+        organization        = k
+        name                = ws
+        allow_destroy_plan  = ws_info.allow_destroy_plan
+        tag_names           = ws_info.tag_names
+        global_remote_state = ws_info.global_remote_state
+        auto_apply          = ws_info.auto_apply
+        git_repo            = ws_info.git_repo
+        git_branch          = ws_info.git_branch
+        vcs_provider        = ws_info.vcs_provider
+      }
+    ]
   ])
 }

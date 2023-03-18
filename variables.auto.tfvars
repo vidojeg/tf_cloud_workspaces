@@ -9,7 +9,15 @@ tfe_org = {
       }
     }
     workspaces = {
-
+      azure-infra = {
+        allow_destroy_plan  = false
+        tag_names           = ["sandbox"]
+        global_remote_state = true
+        auto_apply          = false
+        git_repo            = "vidojeg/azure-blueprints"
+        git_branch          = "main"
+        vcs_provider        = "github"
+      }
     }
     global_variables = {
       tfe_token        = ""
