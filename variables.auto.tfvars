@@ -13,13 +13,31 @@ tfe_org = {
       }
     }
     workspaces = {
-      azure-infra = {
+      azure-infra-main = {
         allow_destroy_plan  = false
         tag_names           = ["sandbox"]
         global_remote_state = true
         auto_apply          = false
         git_repo            = "vidojeg/azure-blueprints"
         git_branch          = "main"
+        vcs_provider        = "github"
+      }
+      azure-infra-production = {
+        allow_destroy_plan  = false
+        tag_names           = ["production", "infra"]
+        global_remote_state = true
+        auto_apply          = false
+        git_repo            = "vidojeg/azure-blueprints"
+        git_branch          = "production"
+        vcs_provider        = "github"
+      }
+      azure-infra-develop = {
+        allow_destroy_plan  = false
+        tag_names           = ["develop", "azure"]
+        global_remote_state = true
+        auto_apply          = false
+        git_repo            = "vidojeg/azure-blueprints"
+        git_branch          = "develop"
         vcs_provider        = "github"
       }
     }

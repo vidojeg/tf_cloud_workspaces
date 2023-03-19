@@ -50,8 +50,8 @@ resource "tfe_oauth_client" "vcs_provider" {
 }
 
 resource "tfe_workspace" "workspace" {
-  for_each                      = { for vars in local.workspaces : "${vars.name}-${vars.git_branch}" => vars }
-  name                          = format("%s-%s", each.value.name, each.value.git_branch)
+  for_each                      = { for vars in local.workspaces : "${vars.name}" => vars }
+  name                          = each.value.name
   organization                  = each.value.organization
   allow_destroy_plan            = each.value.allow_destroy_plan
   tag_names                     = each.value.tag_names
