@@ -24,5 +24,9 @@
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_oauth_token"></a> [oauth\_token](#input\_oauth\_token) | n/a | `any` | n/a | yes |
-| <a name="input_tfe_org"></a> [tfe\_org](#input\_tfe\_org) | n/a | <pre>map(object({<br>    email            = string<br>    workspaces       = map(any)<br>    global_variables = map(any)<br>    vcs              = map(any)<br>  }))</pre> | n/a | yes |
+| <a name="input_tfe_org"></a> [tfe\_org](#input\_tfe\_org) | n/a | <pre>map(object({<br>    email            = string<br>    workspaces       = map(any)<br>    global_variables = map(any)<br>    vcs              = map(any)<br>    teams            = map(any)<br>  }))</pre> | n/a | yes |
 | <a name="input_tfe_token"></a> [tfe\_token](#input\_tfe\_token) | n/a | `any` | n/a | yes |
+
+# NOTE
+
+If you have a paid version of Terraform Cloud, uncomment tfe_team and tfe_team_organization_members!!!
