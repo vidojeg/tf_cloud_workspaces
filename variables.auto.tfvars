@@ -1,6 +1,10 @@
 tfe_org = {
   azure-blueprints-sandbox = {
     email = "vidoje.gavrilovich@gmail.com"
+    teams = {
+      devops     = ["me@vidojeg.cloud", "vidojegavrilovic94@hotmail.rs"]
+      developers = ["olnmnjssdahpfqbkbr@tcwlx.com"]
+    }
     vcs = {
       github = {
         api_url          = "https://api.github.com"

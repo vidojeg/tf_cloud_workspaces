@@ -8,9 +8,7 @@ locals {
       }
     ]
   ])
-}
 
-locals {
   vcs_providers = flatten([
     for k, v in var.tfe_organization : [
       for vcs_prov, vcs_options in v.vcs : {
@@ -22,9 +20,7 @@ locals {
       }
     ]
   ])
-}
 
-locals {
   workspaces = flatten([
     for k, v in var.tfe_organization : [
       for ws, ws_info in v.workspaces : {
@@ -38,6 +34,28 @@ locals {
         git_branch          = ws_info.git_branch
         vcs_provider        = ws_info.vcs_provider
       }
+    ]
+  ])
+
+  team = flatten([
+    for k, v in var.tfe_organization : [
+      for team, team_info in v.teams : {
+        organization = k
+        name         = team
+        email        = team_info
+      }
+    ]
+  ])
+
+  users = flatten([
+    for k, v in var.tfe_organization : [
+      for team, members in v.teams : [
+        for emails in members : {
+          organization = k
+          team         = team
+          email        = emails
+        }
+      ]
     ]
   ])
 }

@@ -1,11 +1,11 @@
 terraform {
-  backend "remote" {
-    organization = "tfe_main"
+  # backend "remote" {
+  #   organization = "tfe_main"
 
-    workspaces {
-      name = "tfe_cloud_workspaces"
-    }
-  }
+  #   workspaces {
+  #     name = "tfe_cloud_workspaces"
+  #   }
+  # }
   required_providers {
     tfe = {
       source  = "hashicorp/tfe"

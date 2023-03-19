@@ -6,6 +6,7 @@ variable "tfe_org" {
     workspaces       = map(any)
     global_variables = map(any)
     vcs              = map(any)
+    teams            = map(any)
   }))
 }
 
