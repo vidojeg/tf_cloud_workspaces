@@ -81,14 +81,14 @@ resource "tfe_team" "teams" {
   organization = each.value.organization
 }
 
-resource "tfe_organization_membership" "all_membership" {
-  for_each     = { for vars in local.users : "${vars.email}" => vars }
-  organization = each.value.organization
-  email        = each.value.email
-}
+# resource "tfe_organization_membership" "all_membership" {
+#   for_each     = { for vars in local.users : "${vars.email}" => vars }
+#   organization = each.value.organization
+#   email        = each.value.email
+# }
 
-resource "tfe_team_organization_members" "team_membership" {
-  for_each                    = { for vars in local.team : "${vars.organization}-${vars.name}" => vars }
-  team_id                     = tfe_team.teams[each.value.name].id
-  organization_membership_ids = [for member in each.value.email : tfe_organization_membership.all_membership[member].id]
-}
+# resource "tfe_team_organization_members" "team_membership" {
+#   for_each                    = { for vars in local.team : "${vars.organization}-${vars.name}" => vars }
+#   team_id                     = tfe_team.teams[each.value.name].id
+#   organization_membership_ids = [for member in each.value.email : tfe_organization_membership.all_membership[member].id]
+# }
